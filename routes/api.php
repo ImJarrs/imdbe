@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\HomeController;
 
 
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
@@ -15,3 +16,5 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 // });
 
 Route::get('/cards', [ProductController::class, 'card']);
+
+Route::get('/home-data', [HomeController::class, 'index']);

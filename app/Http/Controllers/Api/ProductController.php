@@ -19,4 +19,14 @@ class ProductController extends Controller
             'cardBanner' => $cardBanner
         ]);
     }
+
+    public function index() {
+        $promoBanner = Banner::orderBy('created_at', 'asc')->limit(5)->pluck('promo_banner');
+        $homeBanner = Banner::orderBy('created_at', 'asc')->limit(1)->pluck('home_banner');
+        return response()->json([
+            'homeBanner' => $homeBanner,
+            'promoBanner' => $promoBanner
+        ]);
+    }
+
 }

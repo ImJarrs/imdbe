@@ -1,37 +1,5 @@
 @include('layouts.header')
-{{-- <script type="application/json" class="swiper-config">
-  {
-    "loop": true,
-    "speed": 600,
-    "autoplay": {
-      "delay": 5000
-    },
-    "slidesPerView": "auto",
-    "pagination": {
-      "el": ".swiper-pagination",
-      "type": "bullets",
-      "clickable": true
-    },
-    "breakpoints": {
-      "320": {
-        "slidesPerView": 2,
-        "spaceBetween": 40
-      },
-      "480": {
-        "slidesPerView": 3,
-        "spaceBetween": 60
-      },
-      "640": {
-        "slidesPerView": 4,
-        "spaceBetween": 80
-      },
-      "992": {
-        "slidesPerView": 6,
-        "spaceBetween": 120
-      }
-    }
-  }
-</script> --}}
+
 <style>
 
   .promo-banner p{
@@ -84,7 +52,6 @@
             </li>
             <li><a href="{{route('services')}}">Services</a></li>
             <li><a href="{{route('blog')}}">Blog</a></li>
-            {{-- <li><a href="#portfolio">Gallery</a></li> --}}
             <li><a href="#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -214,17 +181,6 @@
       </div>
     </div>
   </section><!-- End Vision Section -->
-  
-  {{-- <section>
-    <div class="promo-banner" style="position: relative; text-align: left;">
-      @foreach ($banners as $banner)
-          <img src="{{ asset('storage/' . $banner->promo_banner)}}" alt="" data-aos="fade-in" style="width: 100%;">
-          <p style="position: absolute; top: 50%; left: 70%; transform: translate(-50%, -50%); margin: 0;">
-            Our RFID key cards are fully compatible with all major RFID guest room lock systems, ensuring seamless integration and secure access for your guests.
-          </p>
-      @endforeach
-    </div>
-  </section> --}}
 
   <section class="swiper-banner p-0">
     <div class="swiper init-swiper">
@@ -240,98 +196,8 @@
       <div class="swiper-pagination"></div>
     </div>
   </section>
- 
-
-  
 
 
-  <!-- Call To Action Section -->
-  {{-- <section id="call-to-action" class="call-to-action section dark-background">
-
-    <img src="{{asset('assets/img/cta-bg.jpg')}}" alt="">
-
-    <div class="container">
-      <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-        <div class="col-xl-10">
-          <div class="text-center">
-            <h3>Call To Action</h3>
-            <p>Call us for order and any questions</p>
-            <a href="https://wa.me/+6281806338869" class="cta-btn"> <i class="bi bi-whatsapp"> </i> WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section><!-- /Call To Action Section --> --}}
-
-  {{-- <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio section">
-
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Gallery</h2>
-      <p>Our Gallery</p>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-
-      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-product">Card</li>
-          <li data-filter=".filter-branding">Web</li>
-        </ul><!-- End Portfolio Filters -->
-
-        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <img src="{{asset('assets/img/products/environmental_series.png')}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Environmental Series</h4>
-              <p>Specification</p>
-              <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Specification <br>
-                              •	Chips: Mifare 1K, F08, Ultralight evl, Ultralight c, Ntag213, Ntag216, CJ8, Sle4442, Sle4428 or customized <br>
-                              •	Material: Environmental, Degradable material <br>
-                              •	Size: 85.4mm x 54mm <br>
-                              •	Thickness: 0.76mm / 0.84mm <br>
-                              •	Printing: CM Y K Printing, Silk screen, Digital print <br>
-                              •	Surface: Glossy / Matte <br>
-                              •	Certification: CE, FCC, RoHS" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-            <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Product 1</h4>
-              <p>Lorem ipsum, dolor sit</p>
-              <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-            <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Branding 1</h4>
-              <p>Lorem ipsum, dolor sit</p>
-              <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-        </div><!-- End Portfolio Container -->
-
-      </div>
-
-    </div>
-
-  </section><!-- /Portfolio Section --> --}}
-
-  <!-- Contact Section -->
   <section id="contact" class="contact section">
 
     <!-- Section Title -->
@@ -371,7 +237,7 @@
 
         </div>
 
-        <!-- <div class="col-lg-8">
+        <div class="col-lg-8">
           <form action="{{ route('send') }}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
             @csrf
             <div class="row gy-4">
@@ -397,19 +263,19 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
                 <!-- Google reCAPTCHA -->
-              <!--
+              
                   <div class="g-recaptcha" style="display: flex; justify-content: center;" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
                 
                 <button type="submit">Send Message</button>
               </div>
             </div>
           </form>
-        </div> -->
+        </div>
 
       </div>
 
     </div>
 
-  </section><!-- /Contact Section -->
+  </section>
  
 @include('layouts.footer')
